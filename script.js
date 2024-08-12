@@ -165,8 +165,11 @@ function GameController(playerOneName = "Player One", playerTwoName = "Player Tw
 function ScreenController() {
     const form = document.querySelector("#form");
     const container = document.querySelector(".container");
+    const boardDiv = document.querySelector('.board');
+    
     form.style.display = "flex";
     container.classList.add("opacity-change");
+    boardDiv.classList.add("board-disabled");  // Disable the board
 
     const game = GameController();
 
@@ -181,12 +184,12 @@ function ScreenController() {
         form.reset();
         form.style.display = "none";
         container.classList.remove("opacity-change");
+        boardDiv.classList.remove("board-disabled");  // Enable the board
 
         updateScreen();
     });
 
     const playerTurnDiv = document.querySelector('.turn');
-    const boardDiv = document.querySelector('.board');
 
     const updateScreen = () => {
         boardDiv.innerHTML = "";

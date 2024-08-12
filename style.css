@@ -3,7 +3,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
+  background-color: lightyellow;
+  color: rgb(116, 43, 43);
 }
 
 #form {
@@ -12,14 +13,14 @@ body {
     flex-direction: column;
     align-items: center;
     width: 40vw;
-    border: 0.1cm solid lightgray;
-    padding: 40px 10px;
+    border: none;
+    padding: 2rem 3rem;
     border-radius: 0.5cm;
     font-size: large;
-    background-color: white;
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%); 
+    background-color: lightyellow;
 }
 
 .board {
@@ -28,22 +29,34 @@ body {
     width: 500px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: 1px solid black;
-    gap: 2px;
+    border: 0.5rem solid rgba(78, 59, 59, 0.459);
+    gap: 0.5rem;
     padding: 2px;
     background-color: blanchedalmond;
-  }
+}
   
 .cell {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2rem;
-    border: 1px solid grey;
-    background: lightyellow;
+    font-size: 5rem;
+    border: none;
+    background-color: rgba(78, 59, 59, 0.459);
     cursor: pointer;
-  }
+    color: white;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+.submit {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: rgba(78, 59, 59, 0.459);
+
+}
 
 .opacity-change {
     opacity: 0.1;
@@ -64,3 +77,4 @@ body {
     left: 50%; 
     transform: translate(-50%, -50%); 
 }
+
